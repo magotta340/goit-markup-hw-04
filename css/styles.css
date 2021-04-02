@@ -13,6 +13,8 @@
   --section-card-set-gap: 30px;
   --section-foto-set: 3;
   --section-foto-set-gap: 30px;
+  --section-clients-set: 6;
+  --section-clients-set-gap: 30px;
   --section-filter-link-set: 3;
   --section-filter-link-gap: 30px;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -209,6 +211,10 @@ img {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), url(../images/banner.png);
 }
 
 .hero-center {
@@ -352,6 +358,7 @@ img {
 
 .card-box {
   padding: 30px 10px;
+  text-align: center;
 }
 
 .card-title {
@@ -367,40 +374,41 @@ img {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
  /* Социальные иконки */
 
 .social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-}
-
-.social-network-link {
-    display: inline-block;
-    margin-left: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
 
 .social-network {
-    display: inline-flex;
+  display: inline-flex;
+}
+
+.social-network-link {
+  display: inline-block;
+  widows: 206px;
+  margin-left: 70px;
 }
 
 .social-item + .social-item {
-    margin-left: 10px;
+  margin-left: 10px;
 }
   
 .social-icon {
-    fill: var(--icons-color);
+  fill: var(--icons-color);
 }
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
-    fill: var(--primary-white-color);
+  fill: var(--primary-white-color);
 }
 
 .social-link:hover,
@@ -408,15 +416,145 @@ img {
   background-color: var(--accent-color);
 }
 
+/* Клиенты */
+
+.clients-titel {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: inline-flex;
+  margin-left: calc(-1 * var(--section-clients-set-gap));
+}
+
+.clients-item {
+  flex-basis: calc(
+    100% / var(--section-clients-set) - var(--section-clients-set-gap)
+  );
+  margin-left: var(--section-clients-set-gap);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+}
+.clients-icon {
+  fill: var(--icons-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+/* Клиенты */
+
+.clients-titel {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: inline-flex;
+  margin-left: calc(-1 * var(--section-clients-set-gap));
+}
+
+.clients-item {
+  flex-basis: calc(
+    100% / var(--section-clients-set) - var(--section-clients-set-gap)
+  );
+  margin-left: var(--section-clients-set-gap);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+}
+
+.clients-icon {
+  fill: var(--icons-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
 /* Подвал */
 .footer {
-    background-color: #2f303a;
-    padding-top: 60px;
-    padding-bottom: 50px;
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.footerbox {
+  display: flex;
+  align-items: baseline;
 }
 
 .logo-end {
   margin-bottom: 20px;
+}
+
+.address-block {
+  width: 231px;
+}
+
+.social-network-link {
+  display: inline-block;
+  widows: 206px;
+  margin-left: 70px;
+}
+
+/* Флексы подвалы */
+
+.invite {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+
+.social-link.end {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon.end {
+  fill: var(--primary-white-color);
+}
+
+.social-link.end:hover,
+.social-link.end:focus {
+  background-color: var(--accent-color);
 }
 
 /* Портфолио */
